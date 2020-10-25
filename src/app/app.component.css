@@ -1,0 +1,11 @@
+
+
+.komplett {
+  height: 100vh;
+  width: 100wh;
+  padding-top: 25vh;
+
+  background-image: url("../assets/hintergrundbild_4.svg");
+  background-repeat: no-repeat;
+  background-position:right bottom;
+}

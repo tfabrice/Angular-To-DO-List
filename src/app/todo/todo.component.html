@@ -1,0 +1,30 @@
+<div class="jumbotron banner">
+  <h4 class="text-center banner-heading">To Do List App With Angular</h4>
+</div>
+
+<!-- placeholder="To Do" -->
+<div class="input-group mb-3">
+  <input type="text" class="form-control"  #itemTitle>
+  <div class="input-group-append hover-cursor" (click)="onAdd(itemTitle)">
+    <span class="input-group-text">Enter</span>
+  </div>
+</div>
+
+<div class="list_todo">
+  <ul class="list-group">
+    <li class="list-group-item element" *ngFor="let item of toDoListArray">
+      <span
+        class="hover-cursor"
+        [class.text.success]="item.isChecked"
+        (click)="alterCheckt(item.$key, item.isChecked)"
+        > <!-- recupere la "key" et la valeur de "isChecked" et inverse ensuite "isChecked" -->
+        <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+      </span>
+      {{ item.title }}
+      <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.$key)">
+        <i class="fa fa-trash-o lg"></i>
+      </span>
+    </li>
+  </ul>
+</div>
+

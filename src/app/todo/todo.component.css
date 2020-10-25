@@ -1,0 +1,44 @@
+
+
+.banner {
+  padding: 45px 0px;
+}
+
+.banner-heading {
+  animation-name: anim;
+  animation-duration: 2s;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.list_todo {
+  margin: 5px 0px;
+}
+
+
+
+.element:hover {
+  background-color: rgb(174, 188, 197);
+  transform: scale(1.01);
+  transition: all .3s;
+  animation-name: example;
+  animation-duration: 0.3s;
+}
+
+
+@keyframes example {
+  from {background-color: rgb(88, 142, 230);}
+  to {background-color: rgb(174, 188, 197);}
+}
+
+
+
